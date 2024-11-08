@@ -275,6 +275,77 @@
 .faq-question:hover {
   color: pink;
 }
+.contact {
+   background-color: rgb(212, 93, 197);
+   padding: 50px 20px;
+   text-align: center;
+}        
+ .contact h2 {
+   color: blue;
+   font-size: 36px;
+   margin-bottom: 30px;
+}        
+.contact-container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 40px;
+}         
+.contact-form, .contact-info {
+   background-color: rgb(119, 240, 139);
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   width: 50vw;
+   max-width: 500px;
+   text-align: left;
+   height: 50vh;
+   margin-left: 50px;
+}
+        
+.contact-form h3, .contact-info h3 {
+   color: rgb(216, 67, 179);
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+        
+.contact-form label {
+   color: black;
+   font-size: 16px;
+   display: block;
+   margin-bottom: 5px;
+}
+        
+.contact-form input, .contact-form textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid rgb(110, 110, 199);
+   border-radius: 5px;
+   margin-bottom: 15px;
+}
+        
+.contact-form .btn {
+   background-color: green;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+        
+.contact-info p {
+   color: hsl(0, 0%, 33%);
+   margin-bottom: 10px;
+   font-size: 16px;
+}
+        
+.contact-info iframe {
+   width: 100%;
+   height: 250px;
+   border-radius: 10px;
+   border: none;
+   margin-top: 20px;
+}
 
 
 
