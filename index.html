@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clinic Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="top-bar">
+                <p>+123 054 925 23 | Support@mail.com | Sonipat, Haryana</p>
+            </div>
+            <nav class="navbar">
+                <div class="logo">Plastic<span>Surgeon</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <!-- <li><input type="search" placeholder="Search..."></li> -->
+                </ul>
+                <button class="appointment-btn"><a href="appointment.html"
+                        class="appointment-btn">Make Appointment</a></button>
+            </nav>
+        </header>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>The Greatest <br> <span>Health Is Wealth</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.</p>
+                <div class="hero-buttons">
+                    <a href="#doctor" class="btn">Get a Doctor</a>
+                    <a href="#contact" class="btn-outline">Contact Now</a>
+                </div>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="rhinoplasty.jpeg" alt="Rhinoplasty">
+                    <h3>Rhinoplasty</h3>
+                    <p>A cosmetic procedure to reshape the nose for improved
+                        appearance and breathing.</p>
+                </div>
+                <div class="service-card">
+                    <img src="liposuction.jpg" alt="Liposuction">
+                    <h3>Liposuction</h3>
+                    <p>Removes excess fat from specific areas of the body to
+                        improve body contours.</p>
+                </div>
+                <div class="service-card">
+                    <img src="facelift.jpg" alt="Facelift">
+                    <h3>Facelift</h3>
+                    <p>A surgical procedure to reduce wrinkles and sagging for a
+                        more youthful appearance.</p>
+                </div>
+            </div>
+        </section>
+                <div class="faq-container">
+                    <h2 style="color: blue; text-align: center;">Frequently Asked Questions</h2>
+            
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(0)">How to book appointment ?</div>
+                        <div class="faq-answer">An appointment button is given , click on that and complete
+                            your appointment.</div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(1)">How can I contact support?</div>
+                        <div class="faq-answer">You can contact support via email or phone listed in the Contact section.</div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(2)">Is there a mobile version of the website?</div>
+                        <div class="faq-answer">Yes, the website is responsive and works on all devices.</div>
+                    </div>
+                </div>
+            
+            
+                <script src="script.js"></script>
+            </body>
+        </html>

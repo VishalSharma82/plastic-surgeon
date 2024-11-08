@@ -1,0 +1,280 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.btn-appointment{
+    background-color: var(--pink);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Colors */
+:root{
+  --green: #4caf50;
+  --pink: #ff4081;
+  --blue: #1e88e5;
+  --light-blue: #e3f2fd;
+}
+
+/* Header */
+.top-bar {
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--light-blue);
+}
+
+.logo {
+  font-size: 24px;
+  color: var(--blue);
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.appointment-btn {
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-image: url("p-surgeon.webp"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white; 
+  text-align: center;
+  height: 700px;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+  color: var(--blue);
+}
+
+.hero-content p {
+  color: #f0f0f0;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-buttons .btn,
+.hero-buttons .btn-outline {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn {
+  background-color: var(--green);
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.btn:hover {
+  background-color: var(--pink);
+}
+
+.btn-outline:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.services {
+  background-color: var(--light-blue);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  color: var(--blue);
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: var(--pink);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 16px;
+}
+
+
+.contact h2 {
+  color: var(--blue);
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.contact-form{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-form h3,
+.contact-info h3 {
+  color: var(--pink);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  color: var(--blue);
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.contact-form .btn {
+  background-color: var(--green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-info p {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid blue;
+  background-color: #f0f8ff;
+}
+
+.faq-question {
+  font-size: 1.2em;
+  color: blue;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  color: green;
+  margin-top: 10px;
+}
+
+.faq-question:hover {
+  color: pink;
+}
+
+
+
