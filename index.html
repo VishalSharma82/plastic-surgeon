@@ -1,128 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clinic Website</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div class="top-bar">
-                <p>+123 054 925 23 | Support@mail.com | Sonipat, Haryana</p>
-            </div>
-            <nav class="navbar">
-                <div class="logo">Plastic<span>Surgeon</span></div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <!-- <li><input type="search" placeholder="Search..."></li> -->
-                </ul>
-                <button class="appointment-btn"><a href="appointment.html"
-                        class="appointment-btn">Make Appointment</a></button>
-            </nav>
-        </header>
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h1>The Greatest <br> <span>Health Is Wealth</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</p>
-                <div class="hero-buttons">
-                    <a href="#doctor" class="btn">Get a Doctor</a>
-                    <a href="#contact" class="btn-outline">Contact Now</a>
-                </div>
-            </div>
-        </section>
-        <section class="services" id="services">
-            <h2>Our Services</h2>
-            <div class="service-cards">
-                <div class="service-card">
-                    <img src="rhinoplasty.jpeg" alt="Rhinoplasty">
-                    <h3>Rhinoplasty</h3>
-                    <p>A cosmetic procedure to reshape the nose for improved
-                        appearance and breathing.</p>
-                </div>
-                <div class="service-card">
-                    <img src="liposuction.jpg" alt="Liposuction">
-                    <h3>Liposuction</h3>
-                    <p>Removes excess fat from specific areas of the body to
-                        improve body contours.</p>
-                </div>
-                <div class="service-card">
-                    <img src="facelift.jpg" alt="Facelift">
-                    <h3>Facelift</h3>
-                    <p>A surgical procedure to reduce wrinkles and sagging for a
-                        more youthful appearance.</p>
-                </div>
-            </div>
-            <section class="contact" id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <h3>Book an Appointment</h3>
-                    <form action="#">
-                        <div style="display: flex; align-items:center;">
-                            <label for="name">Name:</label>
-                            <input style="border-radius: 10px;" type="text" id="name" name="name" required>
-                        </div>
-                        <div style="display: flex; align-items:center;">
-                            <label for="email">Email:</label>
-                            <input style="border-radius: 10px;" type="email" id="email" name="email"
-                                required>
-                        </div>
-                        <div style="display: flex; align-items:center;">
-                            <label for="phone">Phone:</label>
-                            <input style="border-radius: 10px;" type="tel" id="phone" name="phone"
-                                required></div>
-                        <label for="message">Message:</label>
-                        <textarea style="border-radius: 10px;" id="message" name="message" rows="4"
-                            required></textarea>
 
-                        <button type="submit" class="btn">Submit</button>
-                    </form>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-                <!-- Contact Info and Map -->
-                <div class="contact-info">
-                    <h3>Contact Details</h3>
-                    <p><strong>Phone:</strong> +123 054 925 23</p>
-                    <p><strong>Email:</strong> support@mail.com</p>
-                    <p><strong>Address:</strong> 1234 Medical Street, City,
-                        Country</p>
+<body>
+    <header>
+        <div class="top-bar">
+            <p>+123 054 925 23 | Support@mail.com | Sonipat, Haryana</p>
+        </div>
+        <nav class="navbar">
+            <div class="logo">Plastic<span>Surgeon</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <button class="appointment-btn"><a href="appointment.html" class="appointment-btn">Make Appointment</a></button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>The Greatest <br> <span>Health Is Wealth</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="hero-buttons">
+                <a href="#doctor" class="btn">Get a Doctor</a>
+                <a href="#contact" class="btn-outline">Contact Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Welcome to our clinic! With years of expertise in cosmetic surgery, we provide top-notch care in a safe and welcoming environment. Our dedicated team of professionals is committed to helping you achieve your aesthetic goals, prioritizing your health and well-being in every procedure.</p>
+                <p>From consultations to post-surgery care, our focus is on delivering exceptional results tailored to each individual. Trust our clinic to guide you through your transformation journey with compassion, precision, and expertise.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+            <div class="about-image">
+                <img src="clinic.jpg" alt="Clinic">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="rhinoplasty.jpeg" alt="Rhinoplasty">
+                <h3>Rhinoplasty</h3>
+                <p>A cosmetic procedure to reshape the nose for improved appearance and breathing.</p>
+            </div>
+            <div class="service-card">
+                <img src="liposuction.jpg" alt="Liposuction">
+                <h3>Liposuction</h3>
+                <p>Removes excess fat from specific areas of the body to improve body contours.</p>
+            </div>
+            <div class="service-card">
+                <img src="facelift.jpg" alt="Facelift">
+                <h3>Facelift</h3>
+                <p>A surgical procedure to reduce wrinkles and sagging for a more youthful appearance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <img src="client1.jpg" alt="Client 1">
+                <p>"The team at the clinic made me feel comfortable and confident. The results are better than I could have imagined!"</p>
+                <h4>Sarah K.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="client2.jpeg" alt="Client 2">
+                <p>"A fantastic experience from start to finish. The staff is incredibly professional, and the results speak for themselves."</p>
+                <h4>John D.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="client3.jpg" alt="Client 3">
+                <p>"I felt so supported during my entire journey here. I highly recommend this clinic to anyone considering surgery."</p>
+                <h4>Emily R.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-container" id="faq">
+        <h2 style="color: blue; text-align: center;">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(0)">How to book appointment?</div>
+            <div class="faq-answer">An appointment button is given, click on that and complete your appointment.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">How can I contact support?</div>
+            <div class="faq-answer">You can contact support via email or phone listed in the Contact section.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">Is there a mobile version of the website?</div>
+            <div class="faq-answer">Yes, the website is responsive and works on all devices.</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <h3>Book an Appointment</h3>
+                <form action="#">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+
+            <!-- Contact Info and Map -->
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <p><strong>Phone:</strong> +123 054 925 23</p>
+                <p><strong>Email:</strong> support@mail.com</p>
+                <p><strong>Address:</strong> 1234 Medical Street, City, Country</p>
+                <div class="iframe-container">
                     <iframe
                         src="https://maps.google.com/maps?q=1234 Medical Street, City, Country&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" style="border:0;" allowfullscreen
-                        loading="lazy"></iframe>
+                        frameborder="0" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
-        </section>
-        </section>
-                <div class="faq-container">
-                    <h2 style="color: blue; text-align: center;">Frequently Asked Questions</h2>
-            
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleAnswer(0)">How to book appointment ?</div>
-                        <div class="faq-answer">An appointment button is given , click on that and complete
-                            your appointment.</div>
-                    </div>
-            
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleAnswer(1)">How can I contact support?</div>
-                        <div class="faq-answer">You can contact support via email or phone listed in the Contact section.</div>
-                    </div>
-            
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleAnswer(2)">Is there a mobile version of the website?</div>
-                        <div class="faq-answer">Yes, the website is responsive and works on all devices.</div>
-                    </div>
-                </div>
-            
-            
-                <script src="script.js"></script>
-            </body>
-        </html>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
