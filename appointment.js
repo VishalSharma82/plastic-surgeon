@@ -49,3 +49,16 @@ function goHome() {
             document.getElementById('not-confirmed-section').classList.remove('active');
             document.getElementById('booking-section').classList.add('active');
         }
+
+
+
+        document.querySelectorAll('.faqbox img').forEach((image) => {
+            image.addEventListener('click', () => {
+                const answer = image.closest('.faqbox').nextElementSibling; // Get the next sibling (which is the .faq-answer)
+                
+                // Toggle the 'show' class to show or hide the answer
+                answer.classList.toggle('show');
+            });
+        });
+          
+          
