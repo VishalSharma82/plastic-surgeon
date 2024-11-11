@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinic Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
     <header>
         <div class="top-bar">
             <p>+123 054 925 23 | Support@mail.com | Sonipat, Haryana</p>
@@ -22,16 +27,14 @@
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
-            <button class="appointment-btn"><a href="appointment.html" class="appointment-btn">Make
-                    Appointment</a></button>
+            <button class="appointment-btn"><a href="appointment.html" class="appointment-btn">Make Appointment</a></button>
         </nav>
     </header>
 
     <section class="home1" id="home">
         <div class="home1-content">
             <h1>The Greatest <br> <span>Health Is Wealth</span></h1>
-            <p>Enhacing Your Natural Beauty with Expert Care and
-                Precision</p>
+            <p>Enhancing Your Natural Beauty with Expert Care and Precision</p>
             <div class="home1-buttons">
                 <a href="#doctor" class="btn">Get a Doctor</a>
                 <a href="#contact" class="btn-outline">Contact Now</a>
@@ -43,17 +46,8 @@
         <div class="about-container">
             <div class="about-text">
                 <h2>About Us</h2>
-                <p>Welcome to our clinic! With years of expertise in
-                    cosmetic surgery, we provide top-notch care in a safe
-                    and welcoming environment. Our dedicated team of
-                    professionals is committed to helping you achieve your
-                    aesthetic goals, prioritizing your health and well-being
-                    in every procedure.</p>
-                <p>From consultations to post-surgery care, our focus is on
-                    delivering exceptional results tailored to each
-                    individual. Trust our clinic to guide you through your
-                    transformation journey with compassion, precision, and
-                    expertise.</p>
+                <p>Welcome to our clinic! With years of expertise in cosmetic surgery, we provide top-notch care in a safe and welcoming environment. Our dedicated team of professionals is committed to helping you achieve your aesthetic goals, prioritizing your health and well-being in every procedure.</p>
+                <p>From consultations to post-surgery care, our focus is on delivering exceptional results tailored to each individual. Trust our clinic to guide you through your transformation journey with compassion, precision, and expertise.</p>
                 <a href="#contact" class="btn">Contact Us</a>
             </div>
             <div class="about-image">
@@ -65,23 +59,29 @@
     <section class="services" id="services">
         <h2>Our Services</h2>
         <div class="service-cards">
-            <div class="service-card">
+            <div class="service-card" onclick="toggleDetails(this)">
                 <img src="rhinoplasty.jpeg" alt="Rhinoplasty">
                 <h3>Rhinoplasty</h3>
-                <p>A cosmetic procedure to reshape the nose for improved
-                    appearance and breathing.</p>
+                <p>A cosmetic procedure to reshape the nose for improved appearance and breathing.</p>
+                <div class="service-details">
+                    <p>Rhinoplasty can improve both function and aesthetics. The procedure is tailored to each patient’s facial features for natural results.</p>
+                </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" onclick="toggleDetails(this)">
                 <img src="liposuction.jpg" alt="Liposuction">
                 <h3>Liposuction</h3>
-                <p>Removes excess fat from specific areas of the body to
-                    improve body contours.</p>
+                <p>Removes excess fat from specific areas of the body to improve body contours.</p>
+                <div class="service-details">
+                    <p>Liposuction targets stubborn fat areas that don’t respond to diet or exercise, enhancing your natural body shape.</p>
+                </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" onclick="toggleDetails(this)">
                 <img src="facelift.jpg" alt="Facelift">
                 <h3>Facelift</h3>
-                <p>A surgical procedure to reduce wrinkles and sagging for a
-                    more youthful appearance.</p>
+                <p>A surgical procedure to reduce wrinkles and sagging for a more youthful appearance.</p>
+                <div class="service-details">
+                    <p>A facelift tightens sagging skin, reduces wrinkles, and restores facial contours for a younger appearance.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -91,20 +91,17 @@
         <div class="testimonials-container">
             <div class="testimonial">
                 <img src="client1.jpg" alt="Client 1">
-                <p>"The team at the clinic made me feel comfortable and confident. The results are better than I could
-                    have imagined!"</p>
+                <p>"The team at the clinic made me feel comfortable and confident. The results are better than I could have imagined!"</p>
                 <h4>Sarah K.</h4>
             </div>
             <div class="testimonial">
                 <img src="client2.jpeg" alt="Client 2">
-                <p>"A fantastic experience from start to finish. The staff is incredibly professional, and the results
-                    speak for themselves."</p>
+                <p>"A fantastic experience from start to finish. The staff is incredibly professional, and the results speak for themselves."</p>
                 <h4>John D.</h4>
             </div>
             <div class="testimonial">
                 <img src="client3.jpg" alt="Client 3">
-                <p>"I felt so supported during my entire journey here. I highly recommend this clinic to anyone
-                    considering surgery."</p>
+                <p>"I felt so supported during my entire journey here. I highly recommend this clinic to anyone considering surgery."</p>
                 <h4>Emily R.</h4>
             </div>
         </div>
@@ -132,148 +129,67 @@
                 <h3>Contact Details</h3>
                 <p><strong>Phone:</strong> +123 054 925 23</p>
                 <p><strong>Email:</strong> support@mail.com</p>
-                <p><strong>Address:</strong> 1234 Medical Street, City,
-                    Country</p>
+                <p><strong>Address:</strong> 1234 Medical Street, City, Country</p>
                 <div class="iframe-container">
-                    <iframe
-                        src="https://maps.google.com/maps?q=1234 Medical Street, City, Country&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=1234 Medical Street, City, Country&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="sepration"></div>
-
-    <section class="faq">
-        <h1>Frequently asked questions</h1>
-    
-        <div class="faqbox">
-            <span>How to book appointment</span>
-            <img src="https://cdn.hugeicons.com/icons/add-02-stroke-rounded.svg" alt="add-02" width="24" height="24" />
+    <section class="faq-container" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(0)">How to book an appointment?</div>
+            <div class="faq-answer">An appointment button is given, click on that and complete your appointment.</div>
         </div>
-        <div class="faq-answer">
-            To book an appointment, you can visit our website and fill in the booking form.
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">What is the fees of doctor?</div>
+            <div class="faq-answer">The doctor's fees depend on the type of consultation. Please check the specific doctor’s page for more details.</div>
         </div>
-    
-        <div class="faqbox">
-            <span>What is the fees of doctor?</span>
-            <img src="https://cdn.hugeicons.com/icons/add-02-stroke-rounded.svg" alt="add-02" width="24" height="24" />
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">How can I contact support?</div>
+            <div class="faq-answer">You can contact support via email or phone listed in the Contact section.</div>
         </div>
-        <div class="faq-answer">
-            The doctor's fees depend on the type of consultation. Please check the specific doctor’s page for more details.
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(3)">Is there a mobile version of the website?</div>
+            <div class="faq-answer">Yes, the website is responsive and works on all devices.</div>
         </div>
-    
-        <div class="faqbox">
-            <span>How can I get a call from doctor?</span>
-            <img src="https://cdn.hugeicons.com/icons/add-02-stroke-rounded.svg" alt="add-02" width="24" height="24" />
-        </div>
-        <div class="faq-answer">
-            After booking an appointment, the doctor will contact you at the scheduled time.
-        </div>
-    
-        <div class="faqbox">
-            <span>Can I book appointment offline?</span>
-            <img src="https://cdn.hugeicons.com/icons/add-02-stroke-rounded.svg" alt="add-02" width="24" height="24" />
-        </div>
-        <div class="faq-answer">
-            Yes, you can also book appointments offline by visiting our clinic directly.
-        </div>
-    
-        <div class="faqbox">
-            <span>Can I order medicine online?</span>
-            <img src="https://cdn.hugeicons.com/icons/add-02-stroke-rounded.svg" alt="add-02" width="24" height="24" />
-        </div>
-        <div class="faq-answer">
-            Yes, we offer an online pharmacy service. You can order medicines through our website.
-        </div>
-    
-        <div class="faqbox">
-            <span>Do I have to pay doctor's fees when booking appointment online?</span>
-            <img src="https://cdn.hugeicons.com/icons/add-02-stroke-rounded.svg" alt="add-02" width="24" height="24" />
-        </div>
-        <div class="faq-answer">
-            Yes, the doctor's fees are paid online during the appointment booking process.
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(4)">Can I book an appointment offline?</div>
+            <div class="faq-answer">Yes, you can also book appointments offline by visiting our clinic directly.</div>
         </div>
     </section>
-    
 
-
-<div class="sepration"></div>
-
-
-
-                            <!--Footer section -->
-
-
-<head>
-    <!-- Include Font Awesome for the icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col" id="company">
-                <img src="images/logo.png" alt="" class="logo">
-                <p>
-                    We are specialized in designings, make your business a brand.
-                    Try our premium services.
-                </p>
-                <div class="social">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="company">
+                    <img src="images/logo.png" alt="" class="logo">
+                    <p>We are specialized in designings, make your business a brand. Try our premium services.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col" id="services">
-                <h3>Services</h3>
-                <div class="links">
-                    <a href="#">Illustration</a>
-                    <a href="#">Creatives</a>
-                    <a href="#">Poster Design</a>
-                    <a href="#">Card Design</a>
+                <div class="col" id="quick-links">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#services">Our Services</a>
+                    <a href="#doctor">Doctor</a>
+                    <a href="#testimonials">Testimonials</a>
                 </div>
-            </div>
-
-            <div class="col" id="useful-links">
-                <h3>Links</h3>
-                <div class="links">
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Our Policy</a>
-                    <a href="#">Help</a>
-                </div>
-            </div>
-
-            <div class="col" id="contact">
-                <h3>Contact</h3>
-                <div class="contact-details">
-                    <i class="fa fa-location"></i>
-                    <p>FF-42, Procube Avenue, <br> NY, USA</p>
-                </div>
-                <div class="contact-details">
-                    <i class="fa fa-phone"></i>
-                    <p>+1-8755856858</p>
+                <div class="col" id="contact-info">
+                    <h4>Contact Info</h4>
+                    <p>Address: Sonipat, Haryana</p>
+                    <p>Email: support@mail.com</p>
+                    <p>Phone: +123 054 925 23</p>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="form">
-                <form action="">
-                    <input type="text" placeholder="Email here...">
-                    <button aria-label="Send Email"><i class="fa fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
+    </footer>
 
     <script src="script.js"></script>
 </body>

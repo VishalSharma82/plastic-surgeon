@@ -1,64 +1,112 @@
+// Show and hide sections based on the current step
+function showSection(hideSelector, showSelector) {
+    document.querySelector(hideSelector).style.display = 'none';
+    document.querySelector(showSelector).style.display = 'block';
+}
+
+// Validate form and proceed to the payment section
 function proceedToPayment() {
-    document.querySelector(".form-section").style.display = "none";
-    document.querySelector(".payment-section").style.display = "block";
+    const form = document.getElementById('appointmentForm');
+    if (form.checkValidity()) {
+        showSection('.form-section', '.payment-section');
+    } else {
+        alert('Please fill out all required fields.');
+    }
 }
 
+// Validate payment form and proceed to the confirmation section
 function confirmAppointment() {
-    document.querySelector(".payment-section").style.display = "none";
-    document.querySelector(".confirmation-section").style.display = "block";
-    // Simulate sending email (backend functionality needed for real use)
-    alert("Form data sent to your email.");
+    const paymentForm = document.getElementById('paymentForm');
+    if (paymentForm.checkValidity()) {
+        showSection('.payment-section', '.confirmation-section');
+        alert("Form data sent to your email.");  // Simulated email confirmation
+    } else {
+        alert('Please fill out all required fields.');
+    }
 }
 
+// Go back to the appointment form section
 function goBackToForm() {
-    document.querySelector(".payment-section").style.display = "none";
-    document.querySelector(".form-section").style.display = "block";
+    showSection('.payment-section', '.form-section');
 }
 
+// Redirect to home page
 function goHome() {
     window.location.href = "index.html";
 }
 
-        // Function to show the payment section
-        function showPayment() {
-            document.getElementById('booking-section').classList.remove('active');
-            document.getElementById('payment-section').classList.add('active');
-        }
+// Function to toggle sections based on success or failure
+function processPayment() {
+    const isPaymentSuccessful = true;  // Simulated payment success
+    document.getElementById('payment-section').classList.remove('active');
 
-        // Function to process payment and show confirmation or error
-        function processPayment() {
-            const isPaymentSuccessful = true; // Simulate payment success or failure
-            document.getElementById('payment-section').classList.remove('active');
+    if (isPaymentSuccessful) {
+        showSection('#payment-section', '#confirmation-section');
+    } else {
+        showSection('#payment-section', '#not-confirmed-section');
+    }
+}
 
-            if (isPaymentSuccessful) {
-                document.getElementById('confirmation-section').classList.add('active');
-            } else {
-                document.getElementById('not-confirmed-section').classList.add('active');
-            }
-        }
+// Function to show specific sections
+function showSection(hideSelector, showSelector) {
+    document.querySelector(hideSelector).classList.remove('active');
+    document.querySelector(showSelector).classList.add('active');
+}
 
-        // Function to show the booking section
-        function showBooking() {
-            document.getElementById('payment-section').classList.remove('active');
-            document.getElementById('booking-section').classList.add('active');
-        }
+// Reset to the booking section
+function backToHome() {
+    showSection('#confirmation-section', '#booking-section');
+    document.getElementById('not-confirmed-section').classList.remove('active');
+}
 
-        // Function to go back to home or reset
-        function backToHome() {
-            document.getElementById('confirmation-section').classList.remove('active');
-            document.getElementById('not-confirmed-section').classList.remove('active');
-            document.getElementById('booking-section').classList.add('active');
-        }
+// Show the payment section from booking
+function showPayment() {
+    showSection('#booking-section', '#payment-section');
+}
 
+// Show the booking section from payment
+function showBooking() {
+    showSection('#payment-section', '#booking-section');
+}
 
+// Functions to control the flow
+document.getElementById('appointmentForm').addEventListener('submit', (event) => {
+    event.preventDefault();  // Prevent actual form submission
+    proceedToPayment();
+});
 
-        document.querySelectorAll('.faqbox img').forEach((image) => {
-            image.addEventListener('click', () => {
-                const answer = image.closest('.faqbox').nextElementSibling; // Get the next sibling (which is the .faq-answer)
-                
-                // Toggle the 'show' class to show or hide the answer
-                answer.classList.toggle('show');
-            });
-        });
-          
-          
+document.getElementById('paymentForm').addEventListener('submit', (event) => {
+    event.preventDefault();  // Prevent actual form submission
+    confirmAppointment();
+});
+
+// Toggle FAQ answers visibility
+document.querySelectorAll('.faqbox img').forEach((image) => {
+    image.addEventListener('click', () => {
+        const answer = image.closest('.faqbox').nextElementSibling; // Get the next sibling (which is the .faq-answer)
+        
+        // Toggle the 'show' class to show or hide the answer
+        answer.classList.toggle('show');
+    });
+});
+
+// Function to proceed to payment section
+function proceedToPayment() {
+    const form = document.getElementById('appointmentForm');
+    if (form.checkValidity()) {
+        showSection('.form-section', '.payment-section');
+    } else {
+        alert('Please fill out all required fields.');
+    }
+}
+
+// Function to confirm appointment after payment
+function confirmAppointment() {
+    const form = document.getElementById('paymentForm');
+    if (form.checkValidity()) {
+        showSection('.payment-section', '.confirmation-section');
+        alert("Form data sent to your email.");  // Simulated email confirmation
+    } else {
+        alert('Please fill out all required fields.');
+    }
+}

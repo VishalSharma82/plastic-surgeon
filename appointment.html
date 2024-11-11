@@ -29,12 +29,11 @@
                     <label>Appointment Fee:</label>
                     <input type="text" name="fee" value="$100" readonly>
 
-                    <button type="button" onclick="proceedToPayment()">Proceed
-                        to Payment</button>
+                    <button type="submit" onclick="proceedToPayment()">Proceed to Payment</button>
                 </form>
-            </section>
+            </div>
 
-            <section class="payment-section">
+            <div class="payment-section">
                 <h2>Appointment Payment</h2>
                 <form id="paymentForm">
                     <label>Name on Card:</label>
@@ -44,38 +43,29 @@
                     <input type="text" name="cardNumber" required>
 
                     <label>Expiry Date:</label>
-                    <input type="text" name="expiryDate" placeholder="MM/YY"
-                        required>
+                    <input type="text" name="expiryDate" placeholder="MM/YY" required>
 
                     <label>CVV:</label>
                     <input type="text" name="cvv" required>
 
                     <div class="alternative-payments">
                         <p>Or pay with:</p>
-                        <img src="images/gpay.png" alt="Google Pay"
-                            class="payment-logo">
-                        <img src="images/paypal.png" alt="PayPal"
-                            class="payment-logo">
-                        <img src="images/paytm.png" alt="Paytm"
-                            class="payment-logo">
-                        <img src="images/phonepe.png" alt="PhonePe"
-                            class="payment-logo">
+                        <img src="images/gpay.png" alt="Google Pay" class="payment-logo">
+                        <img src="images/paypal.png" alt="PayPal" class="payment-logo">
+                        <img src="images/paytm.png" alt="Paytm" class="payment-logo">
+                        <img src="images/phonepe.png" alt="PhonePe" class="payment-logo">
                     </div>
 
-                    <button type="button" onclick="confirmAppointment()">Pay
-                        $100</button>
-                    <button type="button" onclick="goBackToForm()"
-                        class="back-button">Back</button>
+                    <button type="submit" onclick="confirmAppointment()">Pay $100</button>
+                    <button type="submit" onclick="goBackToForm()" class="back-button">Back</button>
                 </form>
-            </section>
+            </div>
 
-            <section class="confirmation-section">
+            <div class="confirmation-section">
                 <h2>Appointment Confirmed</h2>
-                <p>Thank you for booking an appointment with us! We have
-                    received your details and payment.</p>
+                <p>Thank you for booking an appointment with us! We have received your details and payment.</p>
                 <p>We will contact you shortly with further information.</p>
-                <button class="back-to-home" onclick="goHome()">Back to
-                    Home</button>
+                <button class="back-to-home" onclick="goHome()">Back to Home</button>
             </div>
         </section>
         <script src="appointment.js"></script>
