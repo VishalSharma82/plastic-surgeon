@@ -1,73 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Book Appointment</title>
-        <link rel="stylesheet" href="appointment.css">
-    </head>
-    <body>
-        <section class="container">
-            <div class="form-section">
-                <h2>Book Your Appointment</h2>
-                <form id="appointmentForm">
-                    <label>Full Name:</label>
-                    <input type="text" name="name" required>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Registration Form | CodingLab</title>
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    <div class="container">
 
-                    <label>Email:</label>
-                    <input type="email" name="email" required>
-
-                    <label>Phone:</label>
-                    <input type="tel" name="phone" required>
-
-                    <label>Preferred Date:</label>
-                    <input type="date" name="date" required>
-
-                    <label>Preferred Time:</label>
-                    <input type="time" name="time" required>
-
-                    <label>Appointment Fee:</label>
-                    <input type="text" name="fee" value="$100" readonly>
-
-                    <button type="submit" onclick="proceedToPayment()">Proceed to Payment</button>
-                </form>
-            </div>
-
-            <div class="payment-section">
-                <h2>Appointment Payment</h2>
-                <form id="paymentForm">
-                    <label>Name on Card:</label>
-                    <input type="text" name="cardName" required>
-
-                    <label>Card Number:</label>
-                    <input type="text" name="cardNumber" required>
-
-                    <label>Expiry Date:</label>
-                    <input type="text" name="expiryDate" placeholder="MM/YY" required>
-
-                    <label>CVV:</label>
-                    <input type="text" name="cvv" required>
-
-                    <div class="alternative-payments">
-                        <p>Or pay with:</p>
-                        <img src="images/gpay.png" alt="Google Pay" class="payment-logo">
-                        <img src="images/paypal.png" alt="PayPal" class="payment-logo">
-                        <img src="images/paytm.png" alt="Paytm" class="payment-logo">
-                        <img src="images/phonepe.png" alt="PhonePe" class="payment-logo">
+        <div class="title">Registration</div>
+        <div class="content">
+            
+            <form action="#">
+                <div class="user-details">
+                    
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" required>
                     </div>
+                   
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                        <input type="text" placeholder="Enter your username" required>
+                    </div>
+                  
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+          
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" placeholder="Enter your number" required>
+                    </div>
+                   
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" placeholder="Enter your password" required>
+                    </div>
+                 
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="password" placeholder="Confirm your password" required>
+                    </div>
+                </div>
 
-                    <button type="submit" onclick="confirmAppointment()">Pay $100</button>
-                    <button type="submit" onclick="goBackToForm()" class="back-button">Back</button>
-                </form>
-            </div>
+                <div class="gender-details">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                       
+                        <label for="dot-1">
+                            <input type="radio" name="gender" id="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                     
+                        <label for="dot-2">
+                            <input type="radio" name="gender" id="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                     
+                        <label for="dot-3">
+                            <input type="radio" name="gender" id="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Other</span>
+                        </label>
+                    </div>
+                </div>
 
-            <div class="confirmation-section">
-                <h2>Appointment Confirmed</h2>
-                <p>Thank you for booking an appointment with us! We have received your details and payment.</p>
-                <p>We will contact you shortly with further information.</p>
-                <button class="back-to-home" onclick="goHome()">Back to Home</button>
-            </div>
-        </section>
-        <script src="appointment.js"></script>
-    </body>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
