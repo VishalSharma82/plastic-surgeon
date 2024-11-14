@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f7f8fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .service-page {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Procedures Section */
+  .procedures-section {
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+  }
+  
+  .procedures-section h2 {
+    color: #098afc;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    padding-left: 400px; /* Large screen padding */
+}
+
+/* Add a media query for mobile view */
+@media (max-width: 768px) {
+    .procedures-section h2 {
+        padding-left: 0; /* Remove left padding for mobile */
+        font-size: 24px; /* Adjust font size if needed */
+    }
+}
+
+.procedures-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, blue, #4db6ac, #1e88e5);
+    background-size: 200%;
+    animation: underlineMove 2s linear infinite;
+}
+
+@keyframes underlineMove {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+  
+  
+  .procedure {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .procedure h3 {
+    font-size: 20px;
+    color: #1565c0;
+  }
+  
+  .procedure p {
+    color: #444;
+  }
+  
+  .before-after {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .before-after img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .before-after img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Benefits Section */
+  .benefits-section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff3e0;
+    border-radius: 10px;
+  }
+  .benefits-section h2 {
+    color: #ff7301;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block;
+    padding-left: 350px; /* Padding for larger screens */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    .benefits-section h2 {
+        padding-left: 0; /* Remove left padding for mobile view */
+        text-align: center; /* Center-align the text on small screens */
+        font-size: 24px; /* Adjust font size if necessary for readability */
+    }
+}
+
+.benefits-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6f61, #ffb74d, #4db6ac, #1e88e5);
+    background-size: 200%;
+    animation: underlineMove 3s linear infinite;
+}
+
+@keyframes underlineMove {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
+}
+
+  
+  .benefit {
+    margin-bottom: 20px;
+  }
+  
+  .benefit h3 {
+    font-size: 20px;
+    color: #e65100;
+  }
+  
+  .benefit p {
+    color: #444;
+    margin-top: 5px;
+  }
+  

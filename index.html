@@ -22,12 +22,13 @@
             <div class="logo">Plastic<span>Surgeon</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="./components/about.html">About</a></li>
+                <li><a href="./components/service.html">Services</a></li>
+                <li><a href="./components/testimonial.html">Testimonials</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+                
             </ul>
-            <button class="appointment-btn"><a href="appointment.html" class="appointment-btn">Make Appointment</a></button>
+            <button class="appointment-btn"><a href="./appointment.html" class="appointment-btn">Make Appointment</a></button>
         </nav>
     </header>
 
@@ -36,7 +37,6 @@
             <h1>The Greatest <br> <span>Health Is Wealth</span></h1>
             <p>Enhancing Your Natural Beauty with Expert Care and Precision</p>
             <div class="home1-buttons">
-                <a href="#doctor" class="btn">Get a Doctor</a>
                 <a href="#contact" class="btn-outline">Contact Now</a>
             </div>
         </div>
@@ -51,7 +51,7 @@
                 <a href="#contact" class="btn">Contact Us</a>
             </div>
             <div class="about-image">
-                <img src="clinic.jpg" alt="Clinic">
+                <img src="./image_src/clinic.jpg" alt="Clinic">
             </div>
         </div>
     </section>
@@ -60,7 +60,7 @@
         <h2>Our Services</h2>
         <div class="service-cards">
             <div class="service-card" onclick="toggleDetails(this)">
-                <img src="rhinoplasty.jpeg" alt="Rhinoplasty">
+                <img src="./image_src/rhinoplasty.jpeg" alt="Rhinoplasty">
                 <h3>Rhinoplasty</h3>
                 <p>A cosmetic procedure to reshape the nose for improved appearance and breathing.</p>
                 <div class="service-details">
@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="service-card" onclick="toggleDetails(this)">
-                <img src="liposuction.jpg" alt="Liposuction">
+                <img src="./image_src/liposuction.jpg" alt="Liposuction">
                 <h3>Liposuction</h3>
                 <p>Removes excess fat from specific areas of the body to improve body contours.</p>
                 <div class="service-details">
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="service-card" onclick="toggleDetails(this)">
-                <img src="facelift.jpg" alt="Facelift">
+                <img src="./image_src/facelift.jpg" alt="Facelift">
                 <h3>Facelift</h3>
                 <p>A surgical procedure to reduce wrinkles and sagging for a more youthful appearance.</p>
                 <div class="service-details">
@@ -90,17 +90,17 @@
         <h2>What Our Clients Say</h2>
         <div class="testimonials-container">
             <div class="testimonial">
-                <img src="client1.jpg" alt="Client 1">
+                <img src="./image_src/client1.jpg" alt="Client 1">
                 <p>"The team at the clinic made me feel comfortable and confident. The results are better than I could have imagined!"</p>
                 <h4>Sarah K.</h4>
             </div>
             <div class="testimonial">
-                <img src="client2.jpeg" alt="Client 2">
+                <img src="./image_src/client2.jpeg" alt="Client 2">
                 <p>"A fantastic experience from start to finish. The staff is incredibly professional, and the results speak for themselves."</p>
                 <h4>John D.</h4>
             </div>
             <div class="testimonial">
-                <img src="client3.jpg" alt="Client 3">
+                <img src="./image_src/client3.jpg" alt="Client 3">
                 <p>"I felt so supported during my entire journey here. I highly recommend this clinic to anyone considering surgery."</p>
                 <h4>Emily R.</h4>
             </div>
@@ -126,41 +126,43 @@
             </div>
         </div>
     </section>
-        <section class="faq-container" id="faq">
-        <h2 style="color: rgba(250, 13, 104, 0.822); text-align: center;">Frequently
-            Asked Questions</h2>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleAnswer(0)">How to book
-                appointment?</div>
-            <div class="faq-answer">An appointment button is given, click on
-                that and complete your appointment.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleAnswer(1)">How can I
-                contact support?</div>
-            <div class="faq-answer">You can contact support via email or
-                phone listed in the Contact section.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleAnswer(2)">Is there a
-                mobile version of the website?</div>
-            <div class="faq-answer">Yes, the website is responsive and works
-                on all devices.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleAnswer(3)">Can I book appointment offline?</div>
-            <div class="faq-answer">Yes, you can also book appointments offline by visiting our clinic directly.</div>
-        </div>
-    </section>
+        <section class="backgroundfaq">
+            <section class="faq-container" id="faq">
+                <h2>Frequently
+                    Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(0)">How to book
+                        appointment?</div>
+                    <div class="faq-answer">An appointment button is given, click on
+                        that and complete your appointment.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(1)">How can I
+                        contact support?</div>
+                    <div class="faq-answer">You can contact support via email or
+                        phone listed in the Contact section.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(2)">Is there a
+                        mobile version of the website?</div>
+                    <div class="faq-answer">Yes, the website is responsive and works
+                        on all devices.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(3)">Can I book appointment offline?</div>
+                    <div class="faq-answer">Yes, you can also book appointments offline by visiting our clinic directly.</div>
+                </div>
+            </section>
+        </section>
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col" id="company">
-                    <img src="images/logo.png" alt="" class="logo">
+                    <img src="./image_src/images/logo.png" alt="" class="logo">
                     <p>
-                        We are specialized in designings, make your business a brand.
-                        Try our premium services.
+                        We are specialized in surgery, make your appoitment now.
+                        Try our best services.
                     </p>
                     <div class="social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -174,20 +176,20 @@
                 <div class="col" id="services">
                     <h3>Services</h3>
                     <div class="links">
-                        <a href="#">Illustration</a>
-                        <a href="#">Creatives</a>
-                        <a href="#">Poster Design</a>
-                        <a href="#">Card Design</a>
+                        <span>Rhinoplasty<span><br>
+                        <span>Liposuction</span><br>
+                        <span>Facelift</span><br>
+                        <span>Liposuction</span><br>
+                        <span>Facelift</span>
                     </div>
                 </div>
     
                 <div class="col" id="useful-links">
                     <h3>Links</h3>
                     <div class="links">
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Our Policy</a>
-                        <a href="#">Help</a>
+                        <a href="./components/about.html">About</a>
+                        <a href="./components/service.html">Services</a>
+                        <a href="./components/policy.html">Our Policy</a>
                     </div>
                 </div>
     
