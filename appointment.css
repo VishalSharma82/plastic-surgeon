@@ -1,90 +1,210 @@
-/* General Styles */
+/* Importing Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+/* Global Styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
+  height: 100vh;
   display: flex;
-  background-color: #f5f7fa;
   justify-content: center;
   align-items: center;
-}
-.back-to-home {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.form-section,
-.payment-section,
-.confirmation-section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  max-width: 700px;
   width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-
-h2 {
-  color: #1d72b8;
-  margin-bottom: 15px;
-}
-
-label,
-input {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
+  background-color:rgb(246, 247, 248);
+  padding: 25px 30px;
   border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Styles */
+.container .title {
+  font-size: 25px;
+  display: inline-block;
+  position: relative;
+  color: rgb(239, 9, 205);
+}
+
+
+
+.container .title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: 5px; /* Set the thickness of the underline */
+  background: linear-gradient(to right,rgb(99, 99, 220), #cfc0c0, #0000ff);
+  background-size: 500% 200%;
+  animation: underline-animation 1s linear infinite;
+}
+
+@keyframes underline-animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* User Details Styles */
+form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  color: rgb(223, 46, 185);
+  
+}
+
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .user-details .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Input box styling */
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 50px;
+    padding-left: 15px;
+    border: 1px solid #611bf8; 
+    border-bottom-width: 2px;
+    transition: all 0.3s ease; 
+    color: white;
+    background-color: #323a3f;
+  }
+  
+  /* Focus state for input box */
+  .user-details .input-box input:focus {
+    animation: borderAnimation 0.5s forwards; 
+    border-color: #9b59b6; 
+    border-width: 2px; 
+  }
+  
+
+  @keyframes borderAnimation {
+    0% {
+      border-color: #611bf8; 
+      border-width: 1px; /
+    }
+    50% {
+      border-color: #9b59b6; 
+      border-width: 3px; 
+    }
+    100% {
+      border-color: #611bf8; 
+      border-width: 2px; 
+    }
+  }
+  
+  /* Hover effect on input */
+  .user-details .input-box input:hover {
+    border-color: #ecb608;
+    background-color: black;
+  }
+  
+  
+  .user-details .input-box input:valid {
+    border-color: #9b59b6; 
+  }
+
+
+
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 50%;
+  border-color: #0000ff;
+}
+
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+form .category label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  font-weight: bold;
-  color: white;
 }
 
-.form-section button,
-.confirmation-section button {
-  background-color: #28a745;
+form .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50px;
+  margin-right: 10px;
+  background: #100d0d;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
 }
 
-.payment-section button {
-  background-color: #ff69b4;
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  background: #9b59b6;
+  border-color: #d9d9d9;
 }
 
-.alternative-payments {
-  margin: 15px 0;
-}
-
-.payment-logo {
-  height: 40px;
-  margin: 0 5px;
-}
-
-.back-button {
-  background-color: #1d72b8;
-  margin-top: 10px;
-}
-
-.payment-section , .confirmation-section{
+form input[type="radio"] {
   display: none;
+}
+
+/* Button Styles */
+form .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+form .button input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #9b59b6;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form .button input[type="submit"]:hover {
+  background: #6a5acd;
+  transform: scale(1.05);
+}
+
+/* Hover effects for input boxes */
+.user-details .input-box input:hover {
+  border-color: #6a5acd;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  form .user-details .input-box {
+    width: 100%;
+  }
 }
