@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleAnswer(index) {
-    const faqItem = document.querySelectorAll(".faq-item")[index];
-    faqItem.classList.toggle("active");
+    const answers = document.querySelectorAll('.faq-answer');
+    const answer = answers[index];
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
 }
