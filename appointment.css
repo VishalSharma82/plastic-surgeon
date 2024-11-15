@@ -137,7 +137,7 @@ form .user-details .input-box span.details {
     border: 1px solid #611bf8; 
     border-bottom-width: 2px;
     transition: all 0.3s ease; 
-    color: white;
+    color: black;
     background-color: #f9f9f9;
   }
   
@@ -159,7 +159,7 @@ form .user-details .input-box span.details {
     transition: all 0.3s ease; 
   }
   #appointment-date:hover{
-    background-color: #323a3f;
+    background-color: #bbdefb;
   }
   
 
@@ -181,7 +181,7 @@ form .user-details .input-box span.details {
   /* Hover effect on input */
   .user-details .input-box input:hover {
     border-color: #ecb608;
-    background-color: #323a3f;
+    background-color: #bbdefb;
   }
   
   
