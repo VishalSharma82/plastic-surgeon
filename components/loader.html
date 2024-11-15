@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Line Loader</title>
+  <style>
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #051d2e;
+    }
+
+    .line {
+      width: 8px;
+      height: 50px;
+      margin: 0 5px;
+      background: linear-gradient(360deg, #079cec, #5a12e0, #b7deda);
+      background-size: 200%;
+      animation: colorChange 2.5s linear infinite, bounce 0.3s ease-in-out infinite alternate;
+    }
+
+    .line:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .line:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes colorChange {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 0% 100%; }
+    }
+
+    @keyframes bounce {
+      0% { transform: scaleY(1); }
+      100% { transform: scaleY(1.5); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</body>
+</html>

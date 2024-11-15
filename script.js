@@ -5,21 +5,16 @@ function toggleAnswer(index) {
 }
 
 // Wait for the page to load
-window.addEventListener("load", function() {
-    // Add a class to the body to indicate loading is complete
-    document.body.classList.add("loaded");
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const faqItems = document.querySelectorAll(".faq-item");
-
-    faqItems.forEach((item, index) => {
-        setTimeout(() => {
-            item.classList.add("show");
-        }, index * 700); // Adjust delay time as needed
-    });
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+  
+    // Simulate page load delay (for demonstration)
+    setTimeout(() => {
+      loadingScreen.style.opacity = "0";
+      loadingScreen.style.visibility = "hidden";
+    }, 1500); // Adjust this delay as needed
+  });
+  
 
 function toggleAnswer(index) {
     const answers = document.querySelectorAll('.faq-answer');
