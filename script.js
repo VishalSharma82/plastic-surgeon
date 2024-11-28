@@ -26,3 +26,10 @@ function toggleAnswer(index) {
     const answer = answers[index];
     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
 }
+
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});

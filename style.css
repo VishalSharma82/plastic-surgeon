@@ -33,6 +33,11 @@
 .top-bar p {
   background-color: var(--blue);
 }
+.logo {
+  display: flex;
+  height: 70px;
+  width: 100px;
+}
 
 .navbar {
   display: flex;
@@ -44,14 +49,9 @@
   gap: 10px;
 }
 
-.logo {
-  font-size: 24px;
-  color: var(--blue);
-}
 
-.logo span {
-  color: var(--green);
-}
+
+
 
 .nav-links {
   display: flex;
@@ -70,13 +70,53 @@
   text-decoration: none;
   font-weight: bold;
 }
-@media (max-width: 500px) {
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: var(--blue);
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav-links {
-    flex-direction: column; /* Stack links in a column */
-    align-items: center;
-    padding: 20px;
-    margin: 10px;
-  }}
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--light-blue);
+      position: absolute;
+      top: 70px;
+      left: 0;
+  }
+  .navbar{
+    height: 200px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: flex;
+      padding-top: 15px;
+  }
+
+  .appointment-btn {
+      display: none;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+      text-align: center;
+  }
+}
 
 .about-text a:hover {
   transform: scale(1.1);
