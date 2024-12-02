@@ -21,7 +21,12 @@
   --blue: #1e88e5;
   --light-blue: #e3f2fd;
 }
-
+.headerdiv{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+}
 .top-bar {
   background-color: var(--blue);
   color: white;
@@ -42,14 +47,24 @@
 
 .navbar {
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  list-style: none;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: var(--light-blue);
-  gap: 10px;
+  color: #fff;
+  transition: height 0.3s ease-in-out; /* Smooth height transition */
+  height: 70px; /* Default height */
+}
+.navbar.expanded {
+  height: 200px; /* Expanded height for mobile menu */
 }
 
+#company img{
+   height: 60px;
+   width: 60px;
+   border-radius: 50px;
+   margin: 30px 40px;
+}
 
 
 
@@ -57,7 +72,7 @@
 .nav-links {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 0px;
   list-style: none;
   flex-wrap: wrap;
 }
@@ -74,6 +89,7 @@
 /* Hamburger Menu for Mobile */
 .menu-toggle {
   display: none;
+  position: absolute;
   flex-direction: column;
   cursor: pointer;
 }
@@ -86,31 +102,37 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--light-blue);
-      position: absolute;
-      top: 70px;
-      left: 0;
+    display: none;
+    flex-direction: column;
+    width: 120px;
+    background-color: var(--light-blue);
+    position: absolute;
+    top: 41px;
+    left: 269px;
   }
   .navbar{
-    height: 200px;
+   
+    justify-content: space-between;
   }
 
   .nav-links.active {
       display: flex;
+      margin: 0 -100px
   }
 
   .menu-toggle {
+    
       display: flex;
       padding-top: 15px;
+      position: absolute;
+      top: 30px;
+      right: 10px;
   }
 
   .appointment-btn {
-      display: none;
+     margin-right: 50px;
   }
 
   .nav-links li {
