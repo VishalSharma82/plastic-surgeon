@@ -1,0 +1,322 @@
+ /* Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Full-page image styling */
+  .hero-image {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: Arial, sans-serif;
+  }
+
+  /* Content Section */
+  .content-section {
+    background-color: #1e88e5;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .content-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    color: #333;
+  }
+
+  .content-section h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+
+  .content-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  /* Consultant Button */
+  .consult-button {
+    background-color: #3c79c8;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .consult-button:hover {
+    background-color: #6a69a5;
+  }
+
+.row{
+    background-color: rgb(67, 160, 217);
+}
+  /* Reset */
+  
+ 
+  /* Grid Container Styling */
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .col {
+    flex: 1;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .col.active {
+    flex: 1 1 100%; /* Expand to full width */
+  }
+  
+  .col-content {
+    display: none;
+    margin-top: 20px;
+    text-align: justify;
+    background-color: #e3f2fd;
+  }
+  
+  .col.active .col-content {
+    display: block;
+  }
+  
+  .col.active h3 {
+    margin-bottom: 10px;
+    font-size: 29px;
+    color: #333;
+  }
+  
+  .col.active p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  
+  
+  /* For Smaller Screens */
+  @media (max-width: 768px) {
+    .col {
+      flex: 1 1 100%;
+    }
+  }
+
+
+  /* Container for Benefits */
+.benefits-container {
+    background-color: #e3f2fd; /* Grey background color */
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .benefit-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .benefit-item {
+    margin-bottom: 20px;
+  }
+  
+  .benefit-item h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .benefit-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .benefits-container {
+      padding: 20px;
+    }
+  
+    .benefit-title {
+      font-size: 24px;
+    }
+  
+    .benefit-item h4 {
+      font-size: 20px;
+    }
+  
+    .benefit-item p {
+      font-size: 14px;
+    }
+  }
+
+  
+  /* Container for Breast Lift Surgery Process */
+.surgery-process-container {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #e3f2fd
+  }
+  
+  .process-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+   ;
+  }
+  
+  .process-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+  }
+  
+  .process-list li {
+    margin-bottom: 20px;
+    background-color: #fff; /* White background for each item */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .process-list li h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .process-list li p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .surgery-process-container {
+      padding: 20px;
+    }
+  
+    .process-title {
+      font-size: 24px;
+    }
+  
+    .process-list li h4 {
+      font-size: 20px;
+    }
+  
+    .process-list li p {
+      font-size: 14px;
+    }
+  }
+  
+
+
+  /* Container for Breast Lift Recovery Timeline */
+.recovery-container {
+    background-color: #f9f9f9; /* Light background */
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: rgb(73, 174, 228);
+  }
+  
+  .recovery-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .recovery-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+  }
+  
+  .recovery-list li {
+    margin-bottom: 20px;
+    background-color: #fff; /* White background for each item */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recovery-list li h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .recovery-list li p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .recovery-container {
+      padding: 20px;
+    }
+  
+    .recovery-title {
+      font-size: 24px;
+    }
+  
+    .recovery-list li h4 {
+      font-size: 20px;
+    }
+  
+    .recovery-list li p {
+      font-size: 14px;
+    }
+  }
+  
+
+  
+  
