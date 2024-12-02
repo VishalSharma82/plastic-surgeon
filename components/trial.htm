@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="../plastic-surgeon/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .tab-content-item {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .heading {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            color: #2c3e50;
+        }
+
+        .description {
+            color: #7f8c8d;
+        }
+
+        .subheading {
+            font-size: 20px;
+            color: #34495e;
+            margin-top: 25px;
+        }
+
+        .technique-table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .technique-item {
+            width: 50%;
+            padding: 10px;
+        }
+
+        .benefits-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 10px;
+            color: #7f8c8d;
+        }
+
+        .benefits-box {
+            background-color: #f0f0f0;
+            margin: 50px auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .ideal-candidates {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .ideal-candidates li {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+
+        .personalized-approach {
+            background-color: #e8f0f2;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .approach-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            flex: 1;
+        }
+
+        .image-container img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .heading-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .heading-title {
+            font-size: 28px;
+            color: #2c3e50;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        /* Text Section */
+        .text-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #34495e;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Button Section */
+        .button-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .heading-title {
+                font-size: 24px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 12px 25px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .heading-title {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 13px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .button {
+                font-size: 13px;
+                padding: 10px 20px;
+            }
+        }
+
+
+        .faq-section {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .answer {
+            display: none;
+            padding-top: 10px;
+        }
+
+        .toggle {
+            font-weight: bold;
+        }
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .custom-contact {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .contact-left,
+        .contact-right {
+            flex: 1 1 50%;
+            padding: 20px;
+        }
+
+        .contact-left h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .contact-left p {
+            margin-bottom: 8px;
+        }
+
+        .contact-left iframe {
+            width: 100%;
+            height: 200px;
+            margin: 10px 0;
+        }
+
+        .contact-right form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .custom-input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .custom-input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        .custom-submit {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .custom-submit:hover {
+            background: #007BFF;
+        }
+
+        /* Footer Section */
+        .custom-footer {
+            background: #240146;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-left,
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-links p {
+            margin: 5px 0;
+        }
+
+        .footer-socials a {
+            margin: 5px 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-socials a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="top-bar">
+            <p>+123 054 925 23 | Support@mail.com | Gurgoan, Haryana</p>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./image_src/logo.png" alt="">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="./components/about.html">About</a></li>
+                <li><a href="./components/service.html">Services</a></li>
+                <li><a href="./components/testimonial.html">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+
+            </ul>
+            <button class="appointment-btn"><a href="./appointment.html" class="appointment-btn">Make
+                    Appointment</a></button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Heading Section -->
+        <div class="heading-section">
+            <h2 class="heading-title">Brow Lift Surgery in Los Angeles & Beverly Hills</h2>
+        </div>
+
+        <!-- Text Section -->
+        <div class="text-section">
+            <p class="description">Do you feel like your face shows fatigue even when you feel energized? Drooping
+                eyebrows and forehead wrinkles can create a tired appearance.</p>
+            <p class="subtitle"><strong>What is a Brow Lift Surgery?</strong></p>
+            <p class="description">Brow lift surgery, also known as a forehead lift, addresses and surgically fixes the
+                drooping eyebrows and wrinkles on the forehead to restore a youthful, refreshed look.</p>
+        </div>
+
+        <!-- Button Section -->
+        <div class="button-section">
+            <a href="https://shapeudeserve.com/contact-us/" class="button">Request a consultation ></a>
+        </div>
+    </div>
+
+    <div class="overview-section">
+        <div class="tabs">
+            <button class="tab active">Overview</button>
+            <button class="tab">Before Procedure - What to Expect</button>
+            <button class="tab">After Procedure - What to Expect</button>
+        </div>
+
+        <div class="content">
+            <div id="overview-tab" class="tab-content-item active">
+                <p class="heading"><strong><span class="title">Understanding The Different Brow Lift
+                            Techniques</span></strong></p>
+                <p class="description">Tired of drooping eyebrows and forehead wrinkles? Brow lift surgery can address
+                    these concerns and restore a youthful appearance. There are two main types of brow lift techniques,
+                    each with its own advantages:</p>
+
+                <table class="technique-table">
+                    <tr>
+                        <td class="technique-item">
+                            <p class="subheading"><strong><span class="title">Endoscopic Brow Lift:</span></strong><span
+                                    class="description"> Minimally Invasive Rejuvenation Technique. This advanced
+                                    technique utilizes a tiny camera (endoscope) to visualize and adjust the forehead
+                                    tissues through small incisions hidden within the hairline. Ideal for mild to
+                                    moderate drooping brows, endoscopic lifts offer several benefits:</span></p>
+                            <ul class="benefits-list">
+                                <li><strong>Faster Recovery:</strong> Smaller incisions translate to quicker healing and
+                                    less downtime.</li>
+                                <li><strong>Minimal Scarring:</strong> Strategically placed incisions ensure virtually
+                                    invisible scars.</li>
+                                <li><strong>Suitable for mild to moderate brow drooping and forehead wrinkles.</strong>
+                                </li>
+                                <li><strong>Natural-Looking Results:</strong> Dr. Garg’s expertise delivers a refreshed
+                                    appearance without appearing “overdone.”</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="benefits-box">
+                    <p class="subheading"><strong><span class="title">Benefits of Brow Lift Surgery</span></strong></p>
+                    <ul class="benefits-list">
+                        <li><span class="description">Smooth and Youthful Upper Face</span></li>
+                        <li><span class="description">Enhanced Attractiveness</span></li>
+                        <li><span class="description">Enhanced Confidence and Self-esteem</span></li>
+                        <li><span class="description">Restored a Balanced and Revitalized Face</span></li>
+                    </ul>
+                </div>
+
+                <p class="subheading"><strong><span class="title">Trichophytic Brow Lift: </span></strong><span
+                        class="description"> Ideal for patients with high hairlines. This open technique involves an
+                        incision hidden within the hairline to remove excess forehead skin and elevate the brows.
+                        Trichophytic lifts are ideal for patients with a high hairline who desire a brow lift without
+                        altering their hairline further. However, this technique is less common due to:</span></p>
+                <ul class="benefits-list">
+                    <li><strong>Limited Application:</strong> It’s not suitable for everyone and may not address deeper
+                        wrinkles.</li>
+                </ul>
+
+                <p class="subheading"><strong><span class="title">Coronal Brow Lift: </span></strong><span
+                        class="description"> Addressing More Significant eyebrows drooping. This traditional open
+                        technique involves a single incision across the top of the forehead, from ear to ear. Coronal
+                        lifts are suitable for significant brow drooping or patients with a high hairline. However, due
+                        to the larger incision, this method might cause:</span></p>
+                <ul class="benefits-list">
+                    <li><strong>Chronic Numbness:</strong> Numbness around the incision site can occur and may take time
+                        to resolve.</li>
+                    <li><strong>Longer Recovery: </strong> Healing time is typically longer compared to endoscopic
+                        lifts.</li>
+                </ul>
+
+                <p class="subheading"><strong><span class="title">Non-Surgical Brow Lift with Neurotoxins
+                            (Botox):</span></strong><span class="description">Temporary Solution Botox injections relax
+                        the muscles that pull the brows downward, resulting in a slight brow lift. This non-surgical
+                        option offers:</span></p>
+                <ul class="benefits-list">
+                    <li><strong>Minimal Downtime:</strong> No recovery period.</li>
+                    <li><strong>Subtle Results:</strong> Effects are temporary and require regular touch-up injections
+                        (typically every 2-3 months).</li>
+                </ul>
+
+                <p class="subheading"><strong><span class="title">Ideal Candidates for Brow Lift Surgery</span></strong>
+                </p>
+                <ul class="ideal-candidates">
+                    <li><span class="description">Visible Signs of Brow Aging</span></li>
+                    <li><span class="description">Limited field of vision due to the drooping brows</span></li>
+                    <li><span class="description">Good Overall Health</span></li>
+                    <li><span class="description">Realistic Expectations</span></li>
+                    <li><span class="description">Motivated individuals with Positive Outlook</span></li>
+                </ul>
+            </div>
+            <!-- <img src="../plastic-surgeon/image_src/facelift.jpg" alt="Brow Lift Procedure" /> -->
+        </div>
+    </div>
+
+
+    <div class="personalized-approach">
+        <h2>Dr. Garg's Personalized Approach</h2>
+        <div class="approach-content">
+            <div class="text">
+                <p>Dr. Garg takes a meticulous approach to assess candidacy for gynecomastia surgery. He will:</p>
+                <ul>
+                    <li><strong>Review your medical history:</strong> Understanding your overall health helps determine
+                        suitability for surgery.</li>
+                    <li><strong>Perform a physical examination:</strong> This allows Dr. Garg to evaluate the severity
+                        and type of gynecomastia.</li>
+                    <li><strong>Discuss your goals and expectations:</strong> Understanding your goals enables Dr. Garg
+                        to recommend the best surgical approach.</li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img src="../plastic-surgeon/image_src/facelift.jpg" alt="Dr. Ashu Garg" />
+                <div class="caption">Dr. ASHU GARG</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="faq-item">
+            <div class="question">What are the types of thigh lift surgery available? <span class="toggle">+</span>
+            </div>
+            <div class="answer">Thigh lift surgery includes medial, lateral, and circumferential techniques.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How long will the results of thigh lift surgery last? <span class="toggle">+</span>
+            </div>
+            <div class="answer">Results typically last for many years with proper maintenance.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What are the risks and complications associated with thigh lift surgery?<span
+                    class="toggle">+</span>
+            </div>
+            <div class="answer">Results typically last for many years with proper maintenance.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Will I need liposuction in combination with a thigh lift? <span
+                    class="toggle">+</span>
+            </div>
+            <div class="answer">Results typically last for many years with proper maintenance.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What are the alternatives to thigh lift surgery?<span class="toggle">+</span>
+            </div>
+            <div class="answer">Results typically last for many years with proper maintenance.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What can I do to maintain my results?<span class="toggle">+</span>
+            </div>
+            <div class="answer">Results typically last for many years with proper maintenance.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Can I finance my skin rejuvenation treatment?<span class="toggle">+</span>
+            </div>
+            <div class="answer">Results typically last for many years with proper maintenance.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How can I tighten and rejuvenate my skin?<span class="toggle">+</span>
+            </div>
+            <div class="answer">Results typically last for many years with proper maintenance.</div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="custom-contact">
+        <div class="contact-left">
+            <h1>CONTACT US</h1>
+            <p>Care@shapeudeserve.com</p>
+            <p>DrGarg@shapeudeserve.com</p>
+            <p>+1 424-666-1260</p>
+            <p>+1 424-944-2004</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.699174!2d-118.4018253!3d34.0658967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b90b7984f8f9%3A0x3df6e89e86e68b26!2s435%20N%20Bedford%20Dr%20Suite%20%23213%2C%20Beverly%20Hills%2C%20CA%2090210%2C%20USA!5e0!3m2!1sen!2sin!4v1692304603367!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
+            <p><b>BEVERLY HILLS</b></p>
+            <p>435 N Bedford Dr Suite #213, Beverly Hills, CA 90210</p>
+        </div>
+        <div class="contact-right">
+            <form>
+                <input type="text" placeholder="Full Name" class="custom-input">
+                <input type="email" placeholder="Email Address" class="custom-input">
+                <select class="custom-input">
+                    <option>Select Communication Mode</option>
+                    <option>Email</option>
+                    <option>Phone</option>
+                </select>
+                <select class="custom-input">
+                    <option>Best time to call</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                </select>
+                <textarea placeholder="Ask your query" class="custom-input"></textarea>
+                <button type="submit" class="custom-submit">Submit ></button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="company">
+                    <p style="color: rgb(0, 26, 255);"><strong>Plastic-Surgeon</strong></p><br>
+
+                    <img src="./image_src/logo.png" alt="" class="logo">
+                    <p>
+                        We are specialized in surgery, make your appoitment now.
+                        Try our best services.
+                    </p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col" id="services">
+                    <h3>Services</h3>
+                    <div class="links">
+                        <span>Rhinoplasty<span><br>
+                                <span>Liposuction</span><br>
+                                <span>Facelift</span><br>
+                                <span>Liposuction</span><br>
+                                <span>Facelift</span>
+                    </div>
+                </div>
+
+                <div class="col" id="useful-links">
+                    <h3>Links</h3>
+                    <div class="links">
+                        <a href="./components/about.html">About</a>
+                        <a href="./components/service.html">Services</a>
+                        <a href="./components/policy.html">Our Policy</a>
+                    </div>
+                </div>
+
+                <div class="col" id="contact">
+                    <h3>Contact</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <p>F25G+QJX Gurugram, Haryana, India</p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p>+1-8755856858</p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa-twitter"></i>
+                        <p>support@mail.com</p>
+                    </div>
+                    <div class="iframe-container">
+                        <iframe src="https://maps.google.com/maps?q=28.4595,77.0266&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" allowfullscreen loading="lazy" width="600" height="450">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="Email here...">
+                        <button aria-label="Send Email"><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-item .question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.toggle');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    toggle.textContent = '-';
+                }
+            });
+        });
+        // JavaScript to handle button hover effects or animations if needed
+        document.querySelector('.button').addEventListener('mouseover', function () {
+            // You can add any custom animations or actions here for the button when hovered
+            console.log('Button hovered');
+        });
+
+        document.querySelector('.button').addEventListener('mouseleave', function () {
+            // Reset any hover effects or actions if needed
+            console.log('Button mouse leave');
+        });
+
+    </script>
+    <script src="../plastic-surgeon/script.js"></script>
+</body>
+
+</html>
