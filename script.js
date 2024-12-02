@@ -27,9 +27,31 @@ function toggleAnswer(index) {
     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
 }
 
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const mobileMenu = document.getElementById('mobile-menu'); // Hamburger menu element
+const navbar = document.querySelector('.navbar'); // Navbar element
+const navLinks = document.querySelector('.nav-links'); // Links container
+const homeDiv = document.getElementById('home');
+const logoimg = document.querySelector('.logo')
+const appbtn = document.querySelector('.appointment-btn')
+// Event listener to toggle classes on click
+
 
 mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navbar.classList.toggle('expanded'); // Toggles the height of the navbar
+    navLinks.classList.toggle('active'); // Toggles visibility of nav links
+    if (logoimg.style.display === 'none' || appbtn.style.display=='none') {
+        logoimg.style.display = 'flex';
+        appbtn.style.display='flex'; // Show logo
+      } else {
+        logoimg.style.display = 'none'; // Hide logo
+        appbtn.style.display= 'none';
+      }
+    if (homeDiv.style.paddingTop === '276px') {
+        homeDiv.style.paddingTop = ''; // Reset padding if already applied
+      } else {
+        homeDiv.style.paddingTop = '276px';
+      }
+
+  
 });
+
