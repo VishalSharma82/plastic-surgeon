@@ -7,12 +7,13 @@
 
 .appointment-btn {
   background-color: var(--pink);
-  background-color: green;
-  color: white;
+  /* background-color: green; */
+  color: #ffff;
   border: none;
   padding: 10px 20px;
   border-radius: 50px;
   cursor: pointer;
+  text-decoration:none;
 }
 
 :root {
@@ -899,3 +900,63 @@ background-color: rgb(79, 73, 160);
   0% { transform: scaleY(1); }
   100% { transform: scaleY(1.5); }
 }
+
+
+/* Scoped Dropdown Container */
+.nav-links .dropdown {
+  position: relative; /* Needed for positioning the dropdown menu */
+}
+
+/* Scoped Dropdown Link */
+.nav-links .dropdown .dropdown-link {
+  text-decoration: none;
+  color: #1e88e5; /* Inherit color to maintain consistency */
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links .dropdown .dropdown-link:hover {
+  color: #3498db; /* Highlight color when hovering over "Procedure" */
+}
+
+/* Scoped Dropdown Menu - Initially Hidden */
+.nav-links .dropdown .dropdown-menu {
+  display: none; /* Hide dropdown menu by default */
+  position: absolute;
+  top: 100%; /* Align the dropdown menu below the "Procedure" link */
+  left: 0;
+  background-color: #e3f2fd; /* Background for dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 5px; /* Rounded corners */
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  z-index: 100; /* Ensure the dropdown is above other elements */
+  width: 150px; /* Set a fixed width for the dropdown */
+}
+
+/* Scoped Dropdown Menu Items */
+.nav-links .dropdown .dropdown-menu li {
+  margin: 0; /* Remove default list item margin */
+}
+
+.nav-links .dropdown .dropdown-menu a {
+  display: block; /* Block-level links for easier clicking */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px 15px; /* Add padding for spacing */
+  color: #1e88e5; /* Text color */
+  font-size: 14px; /* Font size for menu items */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links .dropdown .dropdown-menu a:hover { 
+  color: red; 
+}
+
+/* Show Dropdown Menu when Active */
+.nav-links .dropdown.active .dropdown-menu {
+  display: block; /* Display the dropdown menu when active */
+}
+

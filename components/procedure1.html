@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Breast Procedure</title>
-  <link rel="stylesheet" href="check.css">
+  <link rel="stylesheet" href="./procedure1.css">
+  <link rel="stylesheet" href="../style.css">
   
 </head>
 <body>
@@ -171,21 +172,21 @@
     </div>
   </div>
 
- 
-
-<script>document.querySelectorAll('.col').forEach((col) => {
-    col.addEventListener('click', () => {
-      // Close other columns if open
-      document.querySelectorAll('.col').forEach((otherCol) => {
-        if (otherCol !== col) {
-          otherCol.classList.remove('active');
-        }
+  <script>
+    document.querySelectorAll('.col').forEach((col) => {
+      col.addEventListener('click', () => {
+        // Close other columns if open
+        document.querySelectorAll('.col').forEach((otherCol) => {
+          if (otherCol !== col) {
+            otherCol.classList.remove('active');
+          }
+        });
+    
+        // Toggle the clicked column
+        col.classList.toggle('active');
       });
-  
-      // Toggle the clicked column
-      col.classList.toggle('active');
     });
-  });</script>
+  </script>
   
 </body>
 </html>
