@@ -123,3 +123,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// dashboard javascript 
+
+// Line Chart Initialization
+const ctx = document.getElementById('lineChart').getContext('2d');
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [
+            {
+                label: 'Dataset 1',
+                data: [12, 19, 3, 5, 2, 3, 7],
+                borderColor: '#00d084',
+                backgroundColor: 'rgba(0, 208, 132, 0.2)',
+                fill: true,
+            },
+            {
+                label: 'Dataset 2',
+                data: [7, 10, 5, 2, 20, 10, 5],
+                borderColor: '#243342',
+                backgroundColor: 'rgba(36, 51, 66, 0.2)',
+                fill: true,
+            },
+        ],
+    },
+    options: {
+        responsive: true,
+    },
+});

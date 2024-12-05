@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./components/dashboard.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">HEALTH <span>ADMIN</span></div>
+            <ul class="menu">
+                <li><a href="#" id="dashboard-link">Dashboard</a></li>
+                <li><a href="#" id="doctor-link">Doctor</a></li>
+                <li><a href="#" id="patient-link">Patient</a></li>
+                <li><a href="#" id="department-link">Department</a></li>
+                <li><a href="#" id="schedule-link">Schedule</a></li>
+                <li><a href="#" id="appointment-link">Appointment</a></li>
+                <li><a href="#" id="payment-link">Payment</a></li>
+                <li><a href="#" id="report-link">Report</a></li>
+                <li><a href="#" id="hr-link">Human Resources</a></li>
+                <li><a href="#" id="bed-manager-link">Bed Manager</a></li>
+                <li><a href="#" id="notice-link">Notice</a></li>
+                <li><a href="#" id="mail-link">Mail</a></li>
+                <li><a href="#" id="widgets-link">Widgets</a></li>
+            </ul>
+        </aside>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sections that will be shown on clicking the respective menu item -->
+        <section id="dashboard-section" class="content-section">Dashboard Content
+            <h2>Dashboard Features</h2>
+                <div class="cards">
+                    <div class="card">Active Doctors <strong>9</strong></div>
+                    <div class="card">Active Patients <strong>11</strong></div>
+                    <div class="card">Representative <strong>3</strong></div>
+                    <div class="card">Active Nurses <strong>5</strong></div>
+                    <div class="card">Pharmacist <strong>3</strong></div>
+                    <div class="card">Laboratorist <strong>1</strong></div>
+                    <div class="card">Accountant <strong>2</strong></div>
+                    <div class="card">Receptionist <strong>4</strong></div>
+                </div>
+        </section>
+        <section id="doctor-section" class="content-section hidden"><section class="doctors-section">
+            <div class="header">
+              <h1>Doctors</h1>
+              <p>Welcome to MedicalApp</p>
+              <div class="filters">
+                <select>
+                  <option value="permanent">Permanent</option>
+                  <option value="temporary">Temporary</option>
+                </select>
+                <button class="btn-primary">Book Appointment</button>
+              </div>
+            </div>
+            <div class="doctors-grid">
+              <!-- Repeat this card for each doctor -->
+              <div class="doctor-card">
+                <div class="profile-pic">
+                  <img src="https://via.placeholder.com/100" alt="Doctor">
+                </div>
+                <h3>Dr. Steven Yarbrough</h3>
+                <p>Gynecologist</p>
+                <div class="social-icons">
+                  <a href="#">&#x1F426;</a>
+                  <a href="#">&#128100;</a>
+                  <a href="#">&#127760;</a>
+                </div>
+                <button class="btn-secondary">View Profile</button>
+              </div>
+              <!-- Add more cards here -->
+            </div>
+          </section></section>
+        <section id="patient-section" class="content-section hidden"><section class="table-section">
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th><input type="checkbox"></th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Status</th>
+                  <th>Last Measurement</th>
+                  <th>Last Visit</th>
+                  <th>Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="radio" name="select"></td>
+                  <td>David</td>
+                  <td>Barlett</td>
+                  <td><span class="status red"></span></td>
+                  <td>144/91 - 80 BPM <br><small>Aug 17, 2020 | 10:30 AM</small></td>
+                  <td>May 27, 2020</td>
+                  <td>
+                    <button class="btn-icon">📞</button>
+                    <button class="btn-icon">📧</button>
+                    <button class="btn-icon">⋮</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="select"></td>
+                  <td>Samantha</td>
+                  <td>Jones</td>
+                  <td><span class="status red"></span></td>
+                  <td>152/96 - 78 BPM <br><small>Aug 15, 2020 | 9:45 AM</small></td>
+                  <td>Jun 13, 2020</td>
+                  <td>
+                    <button class="btn-icon">📞</button>
+                    <button class="btn-icon">📧</button>
+                    <button class="btn-icon">⋮</button>
+                  </td>
+                </tr>
+                <!-- Repeat rows for other entries -->
+              </tbody>
+            </table>
+          </section></section>
+        <section id="department-section" class="content-section hidden">Department Content</section>
+        <section id="schedule-section" class="content-section hidden"><section class="dashboard">
+            <!-- Map and Search Section -->
+            <div class="map-and-search">
+              <div class="map">
+                <h3>Dr. Oleg Ryazkov</h3>
+                <p>Main Medical Centre, 22 Stat St, Paris</p>
+                <button class="btn-primary" onclick="showDirections()">Directions</button>
+                <p id="directions" style="display: none; margin-top: 10px;">Directions: Turn left on Main Road, go straight 2 km.</p>
+              </div>
+              <div class="search-doctor">
+                <h3>Search a Doctor</h3>
+                <form id="search-form">
+                  <label for="specialization">Specialization</label>
+                  <select id="specialization" required>
+                    <option value="">Choose Specialization</option>
+                    <option value="psychologist">Psychologist</option>
+                    <option value="dentist">Dentist</option>
+                    <option value="pediatrician">Pediatrician</option>
+                  </select>
+                  <label for="city">City</label>
+                  <input type="text" id="city" placeholder="Enter city" required>
+                  <label for="date">Date</label>
+                  <input type="date" id="date" required>
+                  <button type="submit" class="btn-primary">Search</button>
+                </form>
+              </div>
+            </div>
+        
+            <!-- Appointments Section -->
+            <div class="appointments">
+              <h3>Appointments</h3>
+              <div class="tabs">
+                <button class="tab active" data-tab="upcoming">Upcoming</button>
+                <button class="tab" data-tab="past">Past</button>
+              </div>
+              <div class="appointment-cards" id="upcoming">
+                <div class="card">
+                  <h4>Dr. Alisa Fox</h4>
+                  <p>Main Medical Centre, 22 Stat St, Paris</p>
+                  <p>31/08/2018 - 4:35 PM</p>
+                  <button class="btn-secondary">Confirm</button>
+                  <button class="btn-danger">Cancel</button>
+                </div>
+                <div class="card">
+                  <h4>Dr. Edward Nortons</h4>
+                  <p>Main Medical Centre, 14 Victory St, London</p>
+                  <p>02/09/2018 - 6:00 PM</p>
+                  <button class="btn-secondary">Confirm</button>
+                  <button class="btn-danger">Cancel</button>
+                </div>
+              </div>
+              <div class="appointment-cards hidden" id="past">
+                <div class="card">
+                  <h4>Dr. Maximus Capt</h4>
+                  <p>Main Medical Centre, 25 Boulevard Rd, Paris</p>
+                  <p>05/06/2018 - 2:15 PM</p>
+                  <button class="btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Notifications and Calendar -->
+            <div class="notifications-and-calendar">
+              <div class="calendar">
+                <h3>December 2024</h3>
+                <table id="calendar">
+                  <thead>
+                    <tr>
+                      <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Calendar will be generated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+              <div class="notifications">
+                <h3>Notification</h3>
+                <p>You have 3 visits today:</p>
+                <ul>
+                  <li>Dr. Veronica Hops - Psychologist</li>
+                  <li>Dr. Albert Morkov - Dentist</li>
+                  <li>Dr. Marta Knauf - Pediatrician</li>
+                </ul>
+                <h4>Canceled Visits</h4>
+                <p>Dr. Alisa Worski - Pediatrician<br>26/08/2018</p>
+              </div>
+            </div>
+          </section></section>
+        <section id="appointment-section" class="content-section hidden">Appointment Content</section>
+        <section id="payment-section" class="content-section hidden">Payment Content</section>
+        <section id="report-section" class="content-section hidden">Report Content</section>
+        <section id="hr-section" class="content-section hidden">Human Resources Content</section>
+        <section id="bed-manager-section" class="content-section hidden">Bed Manager Content</section>
+        <section id="notice-section" class="content-section hidden">Notice Content</section>
+        <section id="mail-section" class="content-section hidden">Mail Content</section>
+        <section id="widgets-section" class="content-section hidden">Widgets Content</section>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        // Function to handle section visibility
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the clicked section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+
+        // Add event listeners to each menu item
+        document.getElementById('dashboard-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('dashboard-section');
+        });
+
+        document.getElementById('doctor-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('doctor-section');
+        });
+
+        document.getElementById('patient-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('patient-section');
+        });
+
+        document.getElementById('department-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('department-section');
+        });
+
+        document.getElementById('schedule-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('schedule-section');
+        });
+
+        document.getElementById('appointment-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('appointment-section');
+        });
+
+        document.getElementById('payment-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('payment-section');
+        });
+
+        document.getElementById('report-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('report-section');
+        });
+
+        document.getElementById('hr-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('hr-section');
+        });
+
+        document.getElementById('bed-manager-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('bed-manager-section');
+        });
+
+        document.getElementById('notice-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('notice-section');
+        });
+
+        document.getElementById('mail-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('mail-section');
+        });
+
+        document.getElementById('widgets-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            showSection('widgets-section');
+        });
+
+        //scheduled
+
+        // Tabs functionality for appointments
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+  
+      const tabContentId = this.getAttribute('data-tab');
+      document.querySelectorAll('.appointment-cards').forEach(cards => {
+        cards.classList.add('hidden');
+      });
+      document.getElementById(tabContentId).classList.remove('hidden');
+    });
+  });
+  
+  // Show directions dynamically
+  function showDirections() {
+    const directions = document.getElementById('directions');
+    directions.style.display = directions.style.display === 'none' ? 'block' : 'none';
+  }
+  
+  // Handle the search form
+  document.getElementById('search-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const specialization = document.getElementById('specialization').value;
+    const city = document.getElementById('city').value;
+    const date = document.getElementById('date').value;
+    alert(`Searching for ${specialization} in ${city} on ${date}`);
+  });
+  
+  // Generate calendar dynamically
+  function generateCalendar() {
+    const calendarBody = document.querySelector('#calendar tbody');
+    calendarBody.innerHTML = '';
+    const daysInMonth = new Date(2024, 11, 0).getDate(); // December 2024
+    let currentDay = 1;
+    for (let i = 0; i < 5; i++) { // Assume 5 weeks in a month
+      const row = document.createElement('tr');
+      for (let j = 0; j < 7; j++) {
+        const cell = document.createElement('td');
+        if ((i === 0 && j < 2) || currentDay > daysInMonth) { // Start from Mon
+          cell.textContent = '';
+        } else {
+          cell.textContent = currentDay++;
+        }
+        row.appendChild(cell);
+      }
+      calendarBody.appendChild(row);
+    }
+  }
+  generateCalendar();
+  
+    </script>
+</body>
+
+</html>

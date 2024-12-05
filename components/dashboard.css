@@ -1,0 +1,609 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #36d1dc;
+  --secondary-color: #f4f4f4;
+  --danger-color: #f76c6c;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #36d1dc;
+  --secondary-color: #d8d8d8;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --red: #f76c6c;
+  --yellow: #ffc107;
+  --blue: #36d1dc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #36d1dc;
+  --secondary-color: #d8d8d8;
+  --bg-color: #f9f9f9;
+  --font-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+
+
+/* Layout Wrapper */
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width: 250px;
+    background-color: #243342;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.brand{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.brand span {
+    color: #00d084;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #00d084;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content{
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.welcome{
+    font-size: 18px;
+}
+
+.header-icons{
+    display: flex;
+    gap: 10px;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    background: #00d084;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+
+  }
+
+.content-section .active{
+    display: block;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background: #00d084;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Charts Section */
+.charts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.chart-container{
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.calendar{
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+.calendar-placeholder{
+    height: 200px;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+    .main-content{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar{
+        width: 100%;
+        /* position: static; */
+        position:relative;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    .charts{
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* new  */
+
+
+  .doctors-section{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .header h1{
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .header .filters {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .header select,
+  .header .btn-primary {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .header select {
+    background-color: var(--secondary-color);
+  }
+  
+  .header .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .doctors-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .doctor-card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .doctor-card .profile-pic img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .doctor-card h3{
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+  }
+  
+  .doctor-card p {
+    font-size: 0.9rem;
+    color: gray;
+  }
+  
+  .doctor-card .social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .doctor-card .social-icons a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
+  }
+  
+  .doctor-card .social-icons a:hover {
+    color: darkblue;
+  }
+  
+  .doctor-card .btn-secondary{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .doctor-card .btn-secondary:hover{
+    background-color: darkblue;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px){
+    .header {
+      text-align: center;
+    }
+  
+    .header .filters {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  
+  /* new  */
+
+
+  .table-section{
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    overflow-x: auto;
+  }
+  
+  .responsive-table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .responsive-table thead{
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+    font-size: 0.9rem;
+  }
+  
+  .responsive-table th:first-child,
+  .responsive-table td:first-child {
+    text-align: center;
+  }
+  
+  .responsive-table th:last-child,
+  .responsive-table td:last-child {
+    text-align: center;
+  }
+  
+  .responsive-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .status{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .status.red{
+    background-color: var(--red);
+  }
+  
+  .status.yellow{
+    background-color: var(--yellow);
+  }
+  
+  .status.blue{
+    background-color: var(--blue);
+  }
+  
+  .btn-icon{
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 2px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+  }
+  
+  .btn-icon:hover{
+    color: darkblue;
+  }
+  
+  @media (max-width: 768px){
+    .responsive-table th,
+    .responsive-table td {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px){
+    .responsive-table th,
+    .responsive-table td {
+      font-size: 0.7rem;
+      padding: 8px;
+    }
+  
+    .btn-icon{
+      font-size: 1rem;
+    }
+  }
+  
+  /* new  */
+
+
+  
+  #dashboard-section{
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+  }
+  
+  .dashboard{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .map-and-search{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .map {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-doctor {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-doctor form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .search-doctor form input,
+  .search-doctor form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+  }
+  
+  .appointments {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .main-content{
+  }
+  
+  .cards {
+    background: var(--secondary-color);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .card button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  .btn-danger {
+    background: var(--danger-color);
+    color: white;
+  }
+  
+  .notifications-and-calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .calendar {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .calendar table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar th, .calendar td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+  }
+  
+  .notifications {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .map-and-search, .notifications-and-calendar {
+      flex-direction: column;
+    }
+  
+    .appointment-cards .card {
+      flex: 1 1 100%;
+    }
+  }
+  
